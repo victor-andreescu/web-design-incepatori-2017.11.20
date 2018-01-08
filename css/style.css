@@ -197,6 +197,53 @@ COMPONENTS
 }
 
 
+.overlay {
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .5s, opacity .5s;
+}
+.overlay.is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    max-width: 800px;
+    min-height: 200px;
+    padding: 20px;
+}
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    border: 1px solid;
+    border-radius: 50%;
+    width: 20px;
+    line-height: 18px;
+    text-align: center;
+
+    color: rgba(0, 0, 0, .3);
+    transition: color .3s, background-color .3s;
+}
+.modal-close:hover {
+    background-color: coral;
+    color: white;
+}
+
 /************************************* 
 MODULES
 **************************************/
