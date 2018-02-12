@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=zXrnkql68j">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=zXrnkql68j">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=zXrnkql68j">
+    <link rel="manifest" href="/manifest.json?v=zXrnkql68j">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=zXrnkql68j" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico?v=zXrnkql68j">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/css/lightbox.min.css">
+    <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/> -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -27,13 +41,13 @@
     </div>
 
 
-    <div class="header">
+    <div class="header jsHeader">
         <div class="wrap">
             <a href="" class="logo">
                 <img src="/img/logo.png" alt="">
             </a>
 
-            <ul class="menu">
+            <ul class="menu jsMainMenu">
                 <li>
                     <a href="#home">Home</a>
                 </li>
@@ -56,9 +70,24 @@
 
 
     <div class="hero" id="home">
-        <div class="wrap">
-            <h1>"I'm looking for the unexpected"</h1>
+        <div class="slider jsSlider">
+            <div class="slider-element" style="background-image: url('/img/slider.jpg');">
+                <div class="wrap">
+                    <h1>Slide 1</h1>
+                </div>
+            </div>
+            <div class="slider-element" style="background-image: url('/img/contact.jpg');">
+                <div class="wrap">
+                    <h2>Slide 2</h2>
+                </div>
+            </div>
+            <div class="slider-element" style="background-image: url('/img/about.jpg');">
+                <div class="wrap">
+                    <h2>Slide 3</h2>
+                </div>
+            </div>
         </div>
+        
     </div>
 
 
@@ -100,29 +129,26 @@
         <div class="wrap">
             <h2>Portfolio</h2>
 
-            <ul class="menu">
+            <ul class="menu jsTagMenu">
                 <li>
                     <a href="">All</a>
                 </li>
                 <li>
-                    <a href="">Panoramas</a>
+                    <a href="" data-tag="bridges">Bridges</a>
                 </li>
                 <li>
-                    <a href="">Portraits</a>
+                    <a href="" data-tag="lakes">Lakes</a>
                 </li>
                 <li>
-                    <a href="">Portfolio</a>
-                </li>
-                <li>
-                    <a href="">Contact</a>
+                    <a href="" data-tag="mountains">Mountains</a>
                 </li>
             </ul>
 
 
-            <div class="portfolio-gallery">
+            <div class="portfolio-gallery jsPortfolioGallery">
 
-                <div class="portfolio-item">
-                    <a href="">
+                <div class="portfolio-item" data-tag="bridges,mountains">
+                    <a href="/img/slider.jpg" data-lightbox="portfolio">
                         <img src="/img/portfolio/01.jpg" alt="">
 
                         <div class="portfolio-overlay">
@@ -131,8 +157,8 @@
                     </a>
                 </div>
 
-                <div class="portfolio-item slide-top">
-                    <a href="">
+                <div class="portfolio-item slide-top" data-tag="bridges">
+                    <a href="/img/portfolio/02.jpg"  data-lightbox="portfolio">
                         <img src="/img/portfolio/02.jpg" alt="">
 
                         <div class="portfolio-overlay">
@@ -140,8 +166,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="portfolio-item zoom">
-                    <a href="">
+                <div class="portfolio-item zoom"  data-tag="lakes">
+                    <a href="/img/portfolio/03.jpg" data-lightbox="portfolio">
                         <img src="/img/portfolio/03.jpg" alt="">
 
                         <div class="portfolio-overlay">
@@ -149,8 +175,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="portfolio-item">
-                    <a href="">
+                <div class="portfolio-item"  data-tag="lakes">
+                    <a href="/img/portfolio/04.jpg" data-lightbox="portfolio">
                         <img src="/img/portfolio/04.jpg" alt="">
 
                         <div class="portfolio-overlay">
@@ -159,7 +185,7 @@
                     </a>
                 </div>
                 <div class="portfolio-item">
-                    <a href="">
+                    <a href="/img/portfolio/05.jpg" data-lightbox="portfolio">
                         <img src="/img/portfolio/05.jpg" alt="">
 
                         <div class="portfolio-overlay">
@@ -168,7 +194,7 @@
                     </a>
                 </div>
                 <div class="portfolio-item">
-                    <a href="">
+                    <a href="/img/portfolio/06.jpg" data-lightbox="portfolio">
                         <img src="/img/portfolio/06.jpg" alt="">
 
                         <div class="portfolio-overlay">
@@ -176,8 +202,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="portfolio-item">
-                    <a href="">
+                <div class="portfolio-item"  data-tag="mountains">
+                    <a href="/img/portfolio/07.jpg" data-lightbox="portfolio">
                         <img src="/img/portfolio/07.jpg" alt="">
 
                         <div class="portfolio-overlay">
@@ -185,8 +211,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="portfolio-item">
-                    <a href="">
+                <div class="portfolio-item"  data-tag="mountains">
+                    <a href="/img/portfolio/08.jpg" data-lightbox="portfolio">
                         <img src="/img/portfolio/08.jpg" alt="">
 
                         <div class="portfolio-overlay">
@@ -282,13 +308,33 @@
         <div class="wrap">
             <h2>Contact</h2>
 
-            <form action="">
+            <form action="" data-parsley-validate>
                 <div class="row">
                     <div class="column">
                         <label for="">Full name</label>
-                        <input type="text" name="fullName" placeholder="First & Last Name">
+                        <input
+                            type="text" 
+                            name="fullName" 
+                            placeholder="First & Last Name"
+                            required
+                            data-parsley-trigger="focusin focusout"
+                            data-parsley-error-message="Hey scrie-ti numele"
+                        >
                         <label for="">Email</label>
-                        <input type="email" name="emailAddress" placeholder="name@example.com">
+                        <input
+                            type="email" 
+                            name="emailAddress" 
+                            placeholder="name@example.com"
+                            required
+                        >
+                        <label for="">Data nasterii</label>
+                        <input
+                            type="text" 
+                            name="birthdate" 
+                            placeholder="cand te-ai nascut"
+                            required
+                            class="jsDatepicker"
+                        >
                     </div>
 
                     <div class="column">
@@ -299,7 +345,12 @@
                 </div>
 
                 <label for="">Message</label>
-                <textarea name="message" id="" placeholder="Enter your message..."></textarea>
+                <textarea 
+                    name="message" 
+                    id="" 
+                    placeholder="Enter your message..."
+                    required
+                ></textarea>
 
                 <button type="submit" class="button button-filled">Send Message</button>
 
@@ -326,6 +377,13 @@
 
 
     <script src="/js/jquery-3.2.1.min.js"></script>
+
+    <script src="/js/parsley.min.js"></script>
+    <script src="/js/ro.js"></script>
+    <script src="/js/lightbox.min.js"></script>
+    <script type="text/javascript" src="/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <script src="/js/script.js"></script>
 </body>
 

@@ -143,6 +143,7 @@ LAYOUT RULES
     width: 50%;
     padding: 15px;
     vertical-align: top;
+    font-size: 14px;
 }
 
 
@@ -244,6 +245,19 @@ COMPONENTS
     color: white;
 }
 
+
+
+.parsley-errors-list {
+    position: absolute;
+    color: coral;
+    font-style: italic;
+    transform: translateY(-35px);
+    list-style: none;
+}
+.parsley-error {
+    border-color: coral !important;
+}
+
 /************************************* 
 MODULES
 **************************************/
@@ -302,11 +316,11 @@ MODULES
 }
 
 .hero {
-    height: 800px;
-    background-image: url('/img/slider.jpg');
+    /* height: 800px; */
+    /* background-image: url('/img/slider.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     text-align: center;
 }
 
@@ -314,7 +328,32 @@ MODULES
     padding: 0;
 }
 
-.hero h1 {
+.slider-element {
+    height: 800px;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.hero .slick-arrow {
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    background: transparent;
+    color: rgba(255, 255, 255, .6);
+    border: none;
+}
+
+.hero .slick-prev {
+    left: 25px;
+}
+.hero .slick-next {
+    right: 25px;
+}
+
+.hero h1,
+.hero h2 {
     font-size: 42px;
     text-transform: uppercase;
     font-weight: 300;
