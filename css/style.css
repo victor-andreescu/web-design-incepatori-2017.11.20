@@ -258,6 +258,51 @@ COMPONENTS
     border-color: coral !important;
 }
 
+.selectize-control {
+    max-width: 470px;
+    margin-top: 10px;
+}
+.selectize-control.single .selectize-input, .selectize-dropdown.single {
+    border: 2px solid white;
+}
+.selectize-input {
+    border-radius: 0;
+    padding: 20px;
+}
+.selectize-input,
+.selectize-control.single .selectize-input.input-active {
+    background: transparent;
+}
+.selectize-control.single .selectize-input {
+    background: transparent;
+    height: 64px;
+    color: white;
+    font-size: 18px;
+}
+.selectize-control.single .selectize-input, .selectize-control.single .selectize-input input {
+
+}
+.selectize-control.single .selectize-input input
+{
+    height: auto;
+    /* display: none !important; */
+}
+.selectize-dropdown {
+    font-size: 18px;
+}
+.selectize-dropdown .option {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.selectize-dropdown .option:hover {
+    background-color: #4BC9FF;
+    color: white;
+}
+.selectize-control.single .selectize-input:after {
+    border-top-color: white;
+}
 /************************************* 
 MODULES
 **************************************/

@@ -102,3 +102,12 @@ $('.jsSlider').slick({
 
 
 $('.jsDatepicker').flatpickr();
+
+$('.jsSelect').selectize();
+
+
+swal(
+    'Hello',
+    'Alerta noua',
+    'info'
+)
