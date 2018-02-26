@@ -15,6 +15,7 @@ BASE RULES
 
 body {
     font-family: 'Open Sans', sans-serif;
+    min-width: 320px;
 }
 
 h2 {
@@ -146,6 +147,12 @@ LAYOUT RULES
     font-size: 14px;
 }
 
+@media (max-width: 750px) {
+    .column {
+        width: 100%;
+    }
+}
+
 
 /************************************* 
 COMPONENTS
@@ -181,7 +188,18 @@ COMPONENTS
 .social .button-social:last-child {
     margin-right: 0;
 }
-
+@media (max-width: 380px) {
+    .social {
+        text-align: center;
+    }
+    .button-social {
+        width: 42px;
+        line-height: 38px;
+    }
+    .button-social img {
+        height: 16px;
+    }
+}
 .button-filled {
     background-color: #4BC9FF;
     color: white;
@@ -360,6 +378,61 @@ MODULES
     color: #4BC9FF;
 }
 
+.burger-menu {
+    float: right;
+    font-size: 24px;
+    text-transform: uppercase;
+    display: none;
+}
+
+.responsive-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 300px;
+    background-color: rgba(81, 95, 103, 1);
+    z-index: 9010;
+    color: white;
+    transform: translateX(-100%) translateZ(0);
+    transition: transform .5s;
+}
+.responsive-menu.is-visible {
+    box-shadow: 0 0 60px 0 rgba(0, 0, 0, .5);
+    transform: translateX(0) translateZ(0);
+}
+.responsive-menu .menu {
+    float: none;
+    margin-top: 60px;
+}
+.responsive-menu li {
+    display: block;
+}
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: .8;
+}
+
+@media (max-width: 750px) {
+    .header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .logo {
+        margin-top: 6px;
+    }
+    .header .menu {
+        display: none;
+    }
+    .burger-menu {
+        display: block;
+    }
+}
+
+
 .hero {
     /* height: 800px; */
     /* background-image: url('/img/slider.jpg');
@@ -423,7 +496,7 @@ MODULES
     width: 25%;
     vertical-align: top;
     /* outline: 1px solid red; */
-    padding: 0 15px;
+    padding: 15px;
     text-align: center;
 }
 
@@ -451,6 +524,20 @@ MODULES
     font-size: 12px;
     line-height: 1.5;
 }
+
+@media (max-width: 800px) {
+    .service-item {
+        width: 50%;
+    }
+}
+@media (max-width: 480px) {
+    .service-item {
+        width: 100%;
+    }
+}
+
+
+
 
 .portfolio {
     color: #515F67;
@@ -543,6 +630,18 @@ MODULES
     transform: scale(1) rotateZ(0);
 }
 
+@media (max-width: 600px) {
+    .portfolio-item {
+        width: 33.3333%;
+    }
+}
+@media (max-width: 400px) {
+    .portfolio-item {
+        width: 50%;
+    }
+}
+
+
 .default {
     background-color: #515F67;
     color: white;
@@ -578,6 +677,19 @@ MODULES
     background-position: center;
     color: white;
 }
+@media (max-width: 750px) {
+    .about .row {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .about .column {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .about .column:nth-child(even) p:first-child {
+        margin-top: 0;
+    }
+}
 
 .testimonials {
     color: #515F67;
@@ -601,7 +713,12 @@ p.testimonial-author {
     background-position: center;
     color: white;
 }
-
+.contact .row {
+    direction: rtl;
+}
+.contact .column {
+    direction: ltr;
+}
 .contact form {
     margin-top: 25px;
 }

@@ -61,6 +61,9 @@ $('.jsMainMenu a').on('click', function(event){
     var toGo = $(id).offset().top - headerHeight;
 
     // $('body, html').scrollTop(toGo);
+    if ( $('.jsResponsiveMenu').hasClass('is-visible') ) {
+        $('.jsResponsiveMenu').removeClass('is-visible');
+    }
 
     $('body, html').animate({
         "scrollTop": toGo
@@ -106,8 +109,20 @@ $('.jsDatepicker').flatpickr();
 $('.jsSelect').selectize();
 
 
-swal(
-    'Hello',
-    'Alerta noua',
-    'info'
-)
+$('.jsShowMenu').on('click', function(event){
+    event.preventDefault();
+
+    $('.jsResponsiveMenu').addClass('is-visible');
+});
+
+$('.jsCloseMenu').on('click', function(event){
+    event.preventDefault();
+
+    $('.jsResponsiveMenu').removeClass('is-visible');
+});
+
+// swal(
+//     'Hello',
+//     'Alerta noua',
+//     'info'
+// )
